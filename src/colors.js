@@ -1,4 +1,5 @@
 const lightColors = require("@primer/primitives/dist/json/colors/light.json");
+const lightColorsRedStrings = require("@primer/primitives/dist/json/colors/light.json");
 const lightHighContrastColors = require("@primer/primitives/dist/json/colors/light_high_contrast.json");
 const lightColorblindColors = require("@primer/primitives/dist/json/colors/light_colorblind.json");
 const darkColors = require("@primer/primitives/dist/json/colors/dark.json");
@@ -19,6 +20,16 @@ function getColors(theme) {
       lightColors.fg.muted = "#656d76";
 
       return lightColors;
+    case "light_red_strings":
+
+      // Temp override until Primitives are updated
+      lightColorsRedStrings.success.emphasis = "#1f883d";
+      lightColorsRedStrings.btn.primary.bg = lightColors.success.emphasis;
+      lightColorsRedStrings.btn.primary.hoverBg = lightColors.scale.green[5];
+      lightColorsRedStrings.fg.default = "#1f2328";
+      lightColorsRedStrings.fg.muted = "#656d76";
+
+      return lightColorsRedStrings;
     case "light_high_contrast":
       return lightHighContrastColors;
     case "light_colorblind":

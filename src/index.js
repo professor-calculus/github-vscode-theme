@@ -7,6 +7,11 @@ const lightDefaultTheme = getTheme({
   name: "GitHub Light Default",
 });
 
+const lightThemeRedStrings = getTheme({
+  theme: "light_red_strings",
+  name: "GitHub Light Default Red Strings",
+});
+
 const lightHighContrastTheme = getTheme({
   theme: "light_high_contrast",
   name: "GitHub Light High Contrast"
